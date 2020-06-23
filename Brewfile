@@ -11,7 +11,6 @@ brew 'imagemagick'
 brew 'jp2a'
 brew 'jq'
 brew 'libgit2'
-brew 'mas'
 brew 'neovim'
 brew 'openssl'
 brew 'postgresql'
@@ -26,13 +25,11 @@ brew 'node'
 brew 'yarn'
 
 # Python
-brew 'python@2'
 brew 'python@3'
 
 # Ruby
 brew 'ruby-build'
 brew 'rbenv'
-
 
 # Fonts
 cask 'font-hack-nerd-font'
@@ -56,7 +53,6 @@ cask 'subtitles'
 cask 'pennywise'
 
 # Productivity
-cask 'freedom'
 cask 'notion'
 cask 'spectacle'
 cask 'nordvpn'
@@ -70,9 +66,8 @@ cask 'skitch'
 cask 'paw'
 cask 'charles'
 cask 'iterm2'
+cask 'alacritty'
 cask 'postman'
 cask 'kaleidoscope'
 cask 'go2shell'
 cask 'gitup'
-
-mas 'Amphetamine', id: 937984704
