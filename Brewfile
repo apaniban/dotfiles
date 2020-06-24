@@ -33,6 +33,7 @@ brew 'rbenv'
 
 # Fonts
 cask 'font-hack-nerd-font'
+cask 'font-fira-code'
 
 # Tmux
 brew 'tmux'

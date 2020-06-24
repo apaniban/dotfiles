@@ -40,9 +40,9 @@ set signcolumn=yes
 
 " Gruvbox config
 let g:gruvbox_italic=1
-let g:gruvbox_color_column = 'purple'
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
+
 
 " NerdTree
 map <leader>n :NERDTreeToggle<CR>
@@ -50,3 +50,6 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
 nnoremap <C-p> :GFiles<CR>
+
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
