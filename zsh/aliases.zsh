@@ -1,3 +1,6 @@
-alias reload!='. ~/.zshrc'
+alias sa='source ~/.zshrc'
+alias ea='vim ~/.zshrc'
 
-alias cls='clear' # Good 'ol Clear Screen command
+alias cls='clear'
+alias cdw='cd ~/workspace'
+alias cdp='cd ~/personal'

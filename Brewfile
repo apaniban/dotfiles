@@ -58,7 +58,6 @@ cask 'spectacle'
 cask 'nordvpn'
 cask 'grammarly'
 cask 'itsycal'
-cask 'slowquitapps'
 cask 'gifcapture'
 cask 'skitch'
 
