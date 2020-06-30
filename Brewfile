@@ -31,6 +31,9 @@ brew 'python@3'
 brew 'ruby-build'
 brew 'rbenv'
 
+# Java
+cask 'java'
+
 # Fonts
 cask 'font-hack-nerd-font'
 cask 'font-fira-code'

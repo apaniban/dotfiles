@@ -1,6 +1,7 @@
 syntax on
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
@@ -10,7 +11,7 @@ Plug 'junegunn/fzf.vim'
 " call PlugInstall to install new plugins
 call plug#end()
 
-let mapleader=","
+let mapleader = ","
 
 " Set tab to 2 spaces
 filetype plugin indent on
@@ -33,10 +34,9 @@ set nobackup
 set undodir=~/.config/nvim/undodir
 set undofile
 set termguicolors
-
-" gitgutter config
-set updatetime=100
 set signcolumn=yes
+set shortmess+=c
+set updatetime=300
 
 " Gruvbox config
 let g:gruvbox_italic=1
@@ -51,5 +51,35 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 
 nnoremap <C-p> :GFiles<CR>
 
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+" Add these once you move to Alacritty
+" hi! Normal ctermbg=NONE guibg=NONE
+" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+
+
+" COC setup
+inoremap <silent><expr> <TAB>
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+
+" Rg
+nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
+nnoremap \ :Rg<SPACE>
+
