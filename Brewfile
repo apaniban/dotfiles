@@ -2,7 +2,6 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 tap 'homebrew/cask-fonts'
-tap 'dteoh/sqa'
 
 brew 'ack'
 brew 'coreutils'
@@ -64,6 +63,7 @@ cask 'grammarly'
 cask 'itsycal'
 cask 'gifcapture'
 cask 'skitch'
+cask 'caffeine'
 
 # Development
 cask 'paw'
